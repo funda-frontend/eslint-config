@@ -1,0 +1,45 @@
+{
+  "name": "@funda/eslint-config",
+  "version": "1.0.0",
+  "description": "Set of eslint rules used at funda",
+  "main": "index.js",
+  "author": "funda",
+  "license": "MIT",
+  "repository": "github:funda-frontend/eslint-config",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "release": "semantic-release --ci"
+  },
+  "files": [
+    "index.js"
+  ],
+  "dependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.12.1",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "vue-eslint-parser": "^7.1.0"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^5.0.1",
+    "@semantic-release/commit-analyzer": "^8.0.1",
+    "@semantic-release/git": "^9.0.0",
+    "@semantic-release/npm": "^7.0.6",
+    "@semantic-release/release-notes-generator": "^9.0.1",
+    "cz-conventional-changelog": "^3.1.0",
+    "husky": "^4.3.0",
+    "semantic-release": "^17.2.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
+    }
+  }
+}
