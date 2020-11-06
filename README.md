@@ -18,7 +18,7 @@ Create a `.eslintrc.json` file on your project root.
 
 ```
 {
-    "extends": "funda"
+    "extends": "@funda/eslint-config"
 }
 ```
 
